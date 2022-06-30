@@ -42,4 +42,4 @@ int main(){
     printf("f: %.2fd\n", Z);
     printf("x: %x\n\n", Z);
     return 0;
-}
+} 

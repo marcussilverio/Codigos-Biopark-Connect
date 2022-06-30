@@ -22,4 +22,4 @@ int main(){
     printf("multiplicacao: %lf\n", multiplica(a,b));
     printf("divisao: %lf\n", divide(a,b));
     return 0;
-}
+} 

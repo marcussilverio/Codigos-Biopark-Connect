@@ -7,4 +7,4 @@ int main() {
     scanf("%d", &b);
     printf("PROD = %d", a*b);
     return 0;
-}
+} 
