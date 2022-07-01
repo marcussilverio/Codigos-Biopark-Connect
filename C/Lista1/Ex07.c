@@ -11,7 +11,7 @@ int main(){
         scanf("%d", &mes);
     }while((dias < 0 || dias > 30 ) || (mes < 0 || mes > 12));
 
-    qtDias = dias + mes*30;
+    qtDias = dias + (mes-1)*30;
 
     printf("Quantidade de dias desde o inicio do ano: %d", qtDias);
     return 0;
