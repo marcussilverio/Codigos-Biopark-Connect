@@ -15,12 +15,10 @@ int semanas(int anoAtual, int anoNasc){
 void anoNascimento(int *anoNasc){
     printf("Insira o ano de nascimento: ");
     scanf("%d", anoNasc);
-
 }
 void anoCorrente(int *anoAtual){
     printf("Insira o ano corrente: ");
     scanf("%d", anoAtual);
-
 }
 void entradas(int * anoAtual, int * anoNasc){
     int op;
@@ -54,8 +52,7 @@ void entradas(int * anoAtual, int * anoNasc){
 }
 int main(){
 
-    int op, anoAtual = 0 , anoNasc = 0;
-    
+    int op, anoAtual = 0 , anoNasc = 0;    
     do{
         entradas(&anoAtual, &anoNasc);
         system("cls");
