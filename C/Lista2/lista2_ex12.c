@@ -5,7 +5,7 @@ short ehTriangulo(float ladoX, float ladoY, float ladoZ){
     return 0;
 }
 short equilatero(float ladoX, float ladoY, float ladoZ){
-    return (ladoX == ladoY == ladoZ)? 1:0;
+    return (ladoX == ladoY && ladoY == ladoZ)? 1:0;
 }
 short escaleno(float ladoX, float ladoY, float ladoZ){
     if(ladoZ != ladoY && ladoY != ladoZ)

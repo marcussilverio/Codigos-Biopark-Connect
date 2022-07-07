@@ -1,0 +1,8 @@
+2. Indique a diferença entre as seguintes atribuições:
+char a;
+a = ’6’;
+a = 6;
+======================================================
+Resposta:
+A primeira atribuiçao a variavel a recebe o caractere 
+'6', na segunda recebe o caractere ♠, (ack, na tabela ascii).

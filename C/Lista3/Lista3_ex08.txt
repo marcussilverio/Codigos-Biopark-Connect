@@ -1,0 +1,23 @@
+A solução abaixo está correta para classificar um número como par e menor que 100, ou
+par e maior ou igual a 100, etc, como no exemplo visto em aula?
+
+'''
+#include <stdio.h>
+int main(){
+    int a;
+    printf("Digite um número inteiro:");
+    scanf("%d", &a);
+    if( ( a % 2 == 0) && (a<100) )
+        printf("O número é par e menor que 100\n");
+    else if( a>=100 )
+        printf("O número é par e maior ou igual a 100\n");
+    if( ( a % 2 != 0) && (a<100) )
+        printf("O número é ímpar e menor que 100\n");
+    else if (a>=100)
+    printf("O número é ímpar e maior que 100\n");
+}
+'''
+Não esta correto pois no segundo 'if' apenas é verificado se o valor da variavel
+é  maior que 100, se por exemplo a entrada for 103. Na primeira verificação
+103 é falso em ambas as condições, mas na segunda verificação é verdadeiro.
+imprimindo assim, que o numero é par e maior ou igual a 100.
