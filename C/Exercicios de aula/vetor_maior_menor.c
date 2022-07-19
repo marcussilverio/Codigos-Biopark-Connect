@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+    Le 10 valores e retorna qual e o menor e maior deles.
+*/
 int main(){
 
     int i, vet[10];
