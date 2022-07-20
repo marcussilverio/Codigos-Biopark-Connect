@@ -17,8 +17,7 @@ int main(){
 
     for(i = 0 ; i< 10 ; i++){
         for(j=0; j< 5; j++){
-            if(R[j] == S[i]){
-                printf("\tSim\n");
+            if(R[j] == S[i]){                
                 X[c] = R[j];
                 c++;
                 i++;
