@@ -17,7 +17,6 @@ int main(){
 
     for(i = 0 ; i< 10 ; i++){
         for(j=0; j< 5; j++){
-            printf("i=%d,j= %d comparacao R %d == %d S\n", i, j, R[j], S[i]);
             if(R[j] == S[i]){
                 printf("\tSim\n");
                 X[c] = R[j];
