@@ -19,6 +19,7 @@ int main(){
     for(i=0; i<10 ; i++){
         vetorSoma[i] = vetA[i] + vetB[i];
         printf("%d\n", vetorSoma[i]);
+        
     }
     return 0;
 }
