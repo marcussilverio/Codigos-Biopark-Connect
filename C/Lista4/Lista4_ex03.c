@@ -1,20 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /*
-    Leia o nome do usuário e escreva o nome dele na tela 10 vezes.
+    Criar um vetor A com 8 elementos inteiros. Construir um vetor B de mesmo tipo e tamanho e com os elemen-
+    tos do vetor A multiplicados por 2, ou seja: B[i] = A[i] * 2.   
 */
-
 int main(){
+    int vetA[8], vetB[8], i;
 
-    char nome[20];
-    int i;
-
-    fgets(nome, 20, stdin);
-    //tirar o enter no final da string lida pelo fgets
-    nome[strcspn(nome, "\n")] = 0;
-
-    for(i =0; i< 10 ; i++)
-        printf("%s\n", nome);
+    printf("Vetor A:\n");
+    for(i=0; i<8; i++){
+        printf("%d: ", i);
+        scanf("%d", &vetA[i]);
+        fflush(stdin);
+    }
+    //Multiplica o valor de A por 2 e atribui a B
+    for(i = 0; i< 8; i++){
+        vetB[i] = vetA[i]*2;
+        printf("%d\n", vetB[i]);
+    }
     return 0;
 }

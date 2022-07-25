@@ -1,24 +1,34 @@
 #include <stdio.h>
 /*
-    Escreva um algoritmo que calcule o somatório dos números de um intervalo informado pelo usuário.
-*/
+    Crie um programa que leia um vetor de 20 posições e informe:  
+    a) Quantos números pares existem no vetor 
+    b) Quantos números ímpares existem no vetor 
+    c) Quantos números maiores do que 50 
+    d) Quantos números menores do que 7
 
+*/
 int main(){
 
-    int inicio, fim, soma = 0, i;
+    int vet[20], par =0, impar =0, maiorq50 =0, menorq7 = 0, i;
 
-    scanf("%d %d", &inicio, &fim);
-
-    // tratamento para somar sempre do menor para o maior.
-    if( inicio < fim)
-        for(i = inicio; i <= fim ; i++){
-            soma += i;
+    printf("Vetor: \n");
+    for(i = 0; i<20 ; i++){
+        printf("%d: ", i);
+        scanf("%d", &vet[i]);
+    }
+    printf("Calculando...\n");
+    for (i=0; i<20; i++){
+        if(vet[i]%2==0){
+            par++;
+        }else{
+            impar++;
         }
-    else
-        for( i = fim;  i <= inicio ; i++){
-            soma += i;
-        }
-    printf("soma: %d\n", soma);
+        if(vet[i] > 50)
+            maiorq50++;
+        if(vet[i]< 7)
+            menorq7++;
+    }
+    printf("Numeros pares: %d\nNumeros impares: %d\nMaiores que 50: %d\nMenores que 7: %d\n", par, impar, maiorq50, menorq7);
 
     return 0;
 }

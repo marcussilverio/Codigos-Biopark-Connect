@@ -1,17 +1,31 @@
 #include <stdio.h>
+#define MAX 10
 /*
-    Escreva um algoritmo que leia 20 números informados pelo usuário e exiba quantos números são pares.
+    Elabore um algoritmo que leia um vetor e em seguida apresente o vetor ordenado – use o método de ordena-
+    ção que preferir.
 */
 int main(){
+    int vet[MAX], i , j, aux;
 
-    int contador = 0, numero, i;
+    for(i =0; i< MAX; i++){
+        scanf("%d", &vet[i]);
+    }
 
-    for(i = 0 ; i < 20 ; i++){
-        printf("numero %d:", i+1);
-        scanf("%d", &numero);
-        if(numero % 2== 0)
-            contador++;
-    }  
-    printf("Numeros pares: %d", contador);
+    //ordenacao bubble sort
+    for(i =0; i < MAX ; i++){
+        for( j=i+1 ; j < MAX ; j++){
+            if(vet[i] > vet[j]){
+                aux = vet[i];
+                vet[i] = vet[j];
+                vet[j] = aux;
+            }
+        }
+    }
+
+    for(i =0; i< MAX ; i++){
+        printf("%d ", vet[i]);
+    }
+    
+
     return 0;
 }
