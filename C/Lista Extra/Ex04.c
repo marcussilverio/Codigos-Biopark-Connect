@@ -1,4 +1,8 @@
 #include <stdio.h>
+/*
+    Escreva uma função que recebe um número inteiro n passado por parâmetro e devolve o maior número
+    primo que é menor ou igual a n.
+*/
 short ehPrimo(int num){
     int i, cont =0;
     for(i=num ; i > 0 ; i--){
