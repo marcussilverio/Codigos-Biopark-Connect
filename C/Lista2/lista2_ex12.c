@@ -8,7 +8,7 @@ short equilatero(float ladoX, float ladoY, float ladoZ){
     return (ladoX == ladoY && ladoY == ladoZ)? 1:0;
 }
 short escaleno(float ladoX, float ladoY, float ladoZ){
-    if(ladoZ != ladoY && ladoY != ladoZ)
+    if(ladoX != ladoY && ladoY != ladoZ && ladoX != ladoZ)
         return 1;
     return 0;
 }
