@@ -1,4 +1,7 @@
 #include <stdio.h>
+/*
+    Escreva uma função que computa o fatorial de um número inteiro n passado por parâmetro.
+*/
 unsigned long long int fat(int num){
     if(num == 1)
         return 1;
