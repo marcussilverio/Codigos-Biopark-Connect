@@ -1,4 +1,8 @@
 #include <stdio.h>
+/*
+    Escreva uma função que recebe um número inteiro n passado por parâmetro e devolve o primeiro
+    número da série de fibonacci que é maior ou igual a n.
+*/
 int igualOuMaiorFibonacci(int num){
     int termoFibonacci=1, termoAnterior1 =0, termoAnterior2 = 0;
     while(termoFibonacci < num){
