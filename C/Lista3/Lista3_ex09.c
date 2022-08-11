@@ -1,44 +1,17 @@
 #include <stdio.h>
 /*
-    Le 3 numeros inteiros e imprime em ordem crescente;
+    Escreva um algoritmo que leia 20 números informados pelo usuário e exiba quantos números são maiores do que 8.
 */
+int main(){
 
-int main()
-{
+    int contador = 0, numero, i;
 
-    int a, b, c, aux;
-
-    scanf("%d", &a);
-    scanf("%d", &b);
-    scanf("%d", &c);
-
-    if ( a > b && a > c){
-        if ( b < c){
-            aux = b;
-            b = c;
-            c = aux;
-        }        
-    }
-    if ( b > a && b > c){
-        aux = b; 
-        b = a;
-        a = aux;
-        if ( b < c){
-            aux = b;
-            b = c;
-            c = aux;
-        }        
-    }
-    if ( c > a && c > b){
-        aux = c;
-        c = a;
-        a = aux;
-        if ( b < c){
-            aux = b;
-            b = c;
-            c = aux;
-        }        
-    }
-
-    printf("%d %d %d\n", c, b, a);
+    for(i = 0 ; i < 20 ; i++){
+        printf("numero %d:", i+1);
+        scanf("%d", &numero);
+        if(numero > 8)
+            contador++;
+    }  
+    printf("Numeros maiores que 8: %d", contador);
+    return 0;
 }

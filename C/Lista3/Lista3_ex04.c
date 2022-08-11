@@ -1,19 +1,23 @@
 #include <stdio.h>
-/*Programa que le duas variaveis e inverte os valores delas
-sem o uso de variavel auxiliar*/
+#include <stdlib.h>
+#include <string.h>
+/*
+    Leia o nome de um usuário e um número N e escreva o nome dele na tela N vezes.
+*/
+int main(){
 
-int main() {
+    char nome[20];
+    int i, num;
+    
+    printf("nome: ");
+    fgets(nome, 20, stdin);
+    //tirar o enter no final da string lida pelo fgets
 
-    int x, y;
+    printf("numero de vezes: ");
+    scanf("%d", &num);
+    nome[strcspn(nome, "\n")] = 0;
 
-    scanf("%d", &x);
-    scanf("%d", &y);
-
-    x = x+y;
-    y = x - y;
-    x = x - y;
-
-    printf("x: %d, y: %d", x, y);
-
+    for(i =0; i< num ; i++)
+        printf("%s\n", nome);
     return 0;
 }

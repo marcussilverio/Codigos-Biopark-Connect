@@ -1,19 +1,17 @@
 #include <stdio.h>
-#include <math.h> 
-#define PI 3.1415
-/* 
-    Le o raio de um disco e imprime a area e perimetro.
+/*
+    Leia a idade de 20 pessoas e exiba quantas pessoas são maiores de idade.
 */
 int main(){
 
-    float raio, area, perimetro;
+    int contador = 0, idade, i;
 
-    scanf("%f", &raio);
-
-    area = PI * pow(raio, 2);
-    perimetro = 2 * PI * raio;
-
-    printf("area: %.2f\nperimetro: %.2f\n", area, perimetro);
-
-    return 0;   
+    for(i = 0 ; i < 20 ; i++){
+        printf("idade numero %d:", i+1);
+        scanf("%d", &idade);
+        if(idade >=18)
+            contador++;
+    }  
+    printf("Numero de pessoas maiores de idade: %d", contador);
+    return 0;
 }

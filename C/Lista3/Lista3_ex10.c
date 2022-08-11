@@ -1,32 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 /*
-    Le um caractere C ou F e um valor de temperatura e converte de 
-    acordo com a opção escolhida. 
-    
+    Escreva um algoritmo que leia 20 números informados pelo usuário e exiba quantos números são pares.
 */
 int main(){
 
-    char unMed;
-    float temp;
+    int contador = 0, numero, i;
 
-    printf("F - para converter para Fahrenheit\nC - para converter para Celsius\n");
-    scanf("%c", &unMed);
-    fflush(stdin);
-
-    if( unMed == 'f' || unMed == 'F'){
-        printf("Temperatura em Celsius: ");
-        scanf("%f", &temp);
-
-        temp = temp * 1.8 + 32;
-    }else if( unMed == 'c' || unMed == 'C'){
-        printf("Temperatura em Celsius: ");
-        scanf("%f", &temp);
-
-        temp = (5/9) * (temp-32);
-    }
-
-    printf("Temperatura convertida: %.2f",temp);
-
+    for(i = 0 ; i < 20 ; i++){
+        printf("numero %d:", i+1);
+        scanf("%d", &numero);
+        if(numero % 2== 0)
+            contador++;
+    }  
+    printf("Numeros pares: %d", contador);
     return 0;
 }

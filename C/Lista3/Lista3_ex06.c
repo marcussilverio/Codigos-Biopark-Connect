@@ -1,23 +1,17 @@
 #include <stdio.h>
-#include <math.h>
 /*
-    Le o valores correspondente aos 3 lados e calcula
-    a area do triangulo pela formula de Heron.
-
-    O resultado é ligeiramente diferente em algumas situacoes
-    por causa do acumulo de erro obtido por varias operacoes de
-    multiplicação e divisão.
+    Leia a idade de 20 pessoas e exiba a média das idades.
 */
+
 int main(){
+    int idade[20], i;
+    float soma =0;
 
-    float a, b, c, area, s;
-
-    scanf("%f %f %f", &a, &b, &c);
-
-    s = (+a+b+c)/2;
-    area = sqrt((s*(s-a)*(s-b))*(s-c));
-
-    printf("area: %.2f", area);
-    
+    for(i=0; i<20; i++){
+        scanf("%d", &idade[i]);
+        soma += idade[i];
+    }
+    soma = soma/20;
+    printf("media: %.2f\n", soma);
     return 0;
 }

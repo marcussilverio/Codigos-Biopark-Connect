@@ -1,26 +1,17 @@
 #include <stdio.h>
+#include <string.h>
 /*
-    Recebe um par de coordenadas e retorna o quadrante correspondente.
+    Faça um algoritmo escreva a diversas vezes a pergunta “Olá tudo bem?” e leia a resposta do usuário enquanto ele responde não. 
+    Só encerre a execução quando a resposta for igual a “Sim”.
 */
 int main(){
 
-    float x, y;
+    char resposta[4];
 
-    scanf("%f %f", &x, &y);
+    do{
+        printf("Ola, tudo bem?\n");
+        scanf("%s", resposta);
 
-    if(x > 0){
-        if(y > 0 ){
-            printf("Primeiro quadrante\n");
-        }else{
-            printf("Quarto quadrante\n");
-        }
-    }else{
-         if(y > 0 ){
-            printf("Segundo quadrante\n");
-        }else{
-            printf("Terceiro quadrante\n");
-        }
-    }
-
+    }while(strcmp(resposta,"sim"));
     return 0;
 }

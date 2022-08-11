@@ -1,37 +1,24 @@
 #include <stdio.h>
 /*
-    Le os 3 lados de um triangulo e diz o tipo correspondente.
+    Faça um algoritmo que leia 20 números e, ao final, escreva quantos estão entre 0 e 100, quantos estão entre 101 e 200 e quantos são maiores de 200.
+   
 */
-
-short equilatero(float ladoX, float ladoY, float ladoZ){
-    return (ladoX == ladoY && ladoY == ladoZ)? 1:0;
-}
-short escaleno(float ladoX, float ladoY, float ladoZ){
-    if(ladoZ != ladoY && ladoY != ladoZ)
-        return 1;
-    return 0;
-}
-short isosceles(float ladoX, float ladoY, float ladoZ){
-    if(!escaleno(ladoX, ladoY,ladoZ))
-        if(!equilatero(ladoX, ladoY, ladoZ)){
-            return 1;
-        }else{
-            return 0;
-        }    
-    return 0;
-}
 int main(){
 
-    float ladoX, ladoY, ladoZ;
-    scanf("%f %f %f", &ladoX,&ladoY,&ladoZ);       
+    int contador1 = 0, contador2 = 0,contador3 =0, numero, i;
 
-    if(equilatero(ladoX, ladoY, ladoZ)){
-        printf("Triangulo do tipo equilatero\n");
-    }else if(escaleno(ladoX, ladoY, ladoZ)){
-        printf("Triangulo do tipo escaleno\n");
-    }else if(isosceles(ladoX, ladoY, ladoZ)){
-        printf("Triangulo do tipo isosceles\n");
-    }
-  
+    for(i = 0 ; i < 20 ; i++){
+        printf("numero %d:", i+1);
+        scanf("%d", &numero);
+        if(numero >= 0 && numero <= 100)
+            contador1++;
+        else if(numero > 100 && numero <= 200)
+            contador2++;
+        else if(numero > 200)
+            contador3++;
+    }  
+    printf("Numeros entre 0 e 100: %d", contador1);
+    printf("Numeros entre 100 e 200: %d", contador2);
+    printf("Numeros maior de 200: %d", contador3);
     return 0;
 }

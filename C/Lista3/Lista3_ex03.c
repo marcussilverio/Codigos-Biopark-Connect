@@ -1,18 +1,20 @@
 #include <stdio.h>
-#include <math.h>
-/* 
-    Faça um programa que leia um número real x e calcule o valor de 
-    f(x) =x^(1/2) + (x=2) + x^x.
+#include <stdlib.h>
+#include <string.h>
+/*
+    Leia o nome do usuário e escreva o nome dele na tela 10 vezes.
 */
 
 int main(){
 
-    double x;
-    printf("x: ");
-    scanf("%lf", &x);
+    char nome[20];
+    int i;
 
-    x = sqrt(x) + (x/2) + pow(x, x);
+    fgets(nome, 20, stdin);
+    //tirar o enter no final da string lida pelo fgets
+    nome[strcspn(nome, "\n")] = 0;
 
-    printf("valor de x: %lf", x);
+    for(i =0; i< 10 ; i++)
+        printf("%s\n", nome);
     return 0;
 }
