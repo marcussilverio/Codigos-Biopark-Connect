@@ -40,7 +40,7 @@ void escreve_morse(int num){
     printf("%s", dic[num]);
 }
 int logaritimo_mais_proximo(int num){
-    int i, cont = 0;
+    int cont = 0;
     
     do{
         num = num / 10;
