@@ -99,8 +99,7 @@ void imprimePoltronas(Poltrona vet[LIN][COL]){
             printf("%3d ", vet[i][j].numero);
             style(RESETALL);
         }
-        printf("|");
-        printf("\n");
+        printf("|\n");
     }
     printf("+ -- + -- + -- + -- + -- + -- + -- + -- + -- +\n");
     printf("LEGENDA:\n");
