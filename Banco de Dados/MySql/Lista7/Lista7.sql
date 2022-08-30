@@ -1,4 +1,3 @@
--- Active: 1657297827837@@127.0.0.1@3306@controledelivrosfinal
 -- 1 - Consultar titulo livro, nome editora, nome estilo e nome autor
 SELECT livro.titulo as titulo, editora.nome as editora, estilo.nome as estilo, autor.nome as autor
 FROM livro
