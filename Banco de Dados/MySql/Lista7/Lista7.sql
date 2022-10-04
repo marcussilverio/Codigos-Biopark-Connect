@@ -1,3 +1,4 @@
+-- Active: 1657297827837@@127.0.0.1@3306@controledelivrosfinal
 -- 1 - Consultar titulo livro, nome editora, nome estilo e nome autor
 SELECT livro.titulo as titulo, editora.nome as editora, estilo.nome as estilo, autor.nome as autor
 FROM livro
@@ -53,11 +54,13 @@ JOIN estilo ON estilo.id_estilo = livro_estilo.id_estilo
 JOIN editora ON editora.id_editora = livro.id_editora
 WHERE editora.nome = "Globo";
 -- 9 - Consultar o livro de maior valor;
-SELECT livro.titulo, MAX(livro.valor) 
-FROM livro;
+SELECT livro.titulo, livro.valor
+FROM livro
+WHERE valor = (SELECT MAX(livro.valor) FROM livro);
 -- 10 - Consultar o livro de menor valor;
-SELECT livro.titulo, MIN(livro.valor) 
-FROM livro;
+SELECT livro.titulo, livro.valor
+FROM livro
+WHERE valor = (SELECT MIN(livro.valor) FROM livro);
 -- 11 - Consultar a média de custo do livros;
 SELECT AVG(livro.valor)
 FROM livro;
