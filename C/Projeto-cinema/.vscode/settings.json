@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.txt": "tex",
-        "stdlib.h": "c",
-        "stdio.h": "c",
-        "library.h": "c"
-    }
-}
