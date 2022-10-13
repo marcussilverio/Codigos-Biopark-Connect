@@ -122,7 +122,7 @@ void fazerCompra(Poltrona vet[LIN][COL] ){
         for(int j = 0; j < COL; j++){
             if(vet[i][j].numero == cadeira){
                 if(vet[i][j].vendido == True ||vet[i][j].reservado == True){
-                    printf("Poltrona inisponivel.\n");
+                    printf("Poltrona indisponivel.\n");
                     return;
                 }else{
                     vet[i][j].vendido = True;
@@ -143,7 +143,7 @@ void fazerReserva(Poltrona vet[LIN][COL] ){
         for(int j = 0; j < COL; j++){
             if(vet[i][j].numero == cadeira){
                 if(vet[i][j].vendido == True ||vet[i][j].reservado == True){
-                    printf("Poltrona insponivel.\n");
+                    printf("Poltrona indisponivel.\n");
                     return;
                 }else{
                     vet[i][j].reservado = True;
